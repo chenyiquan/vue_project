@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+    <style>
+      /* 样式设置仅供演示，您可以根据需要自定义样式 */
+      body {
+        font-family: Arial, sans-serif;
+      }
+  
+      .menu {
+        display: flex;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+  
+      .menu-item {
+        cursor: pointer;
+        margin-right: 20px;
+      }
+  
+      .content {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+      }
+  
+      .content.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div id="app"></div> -->
+    <!-- <div id="test"></div>
+    <div id="sort"></div>
+    <div id="curd"></div>
+    <div id="book"></div> -->
+
+   
+
+    <div class="menu">
+      <button class="menu-item" onclick="toggleTab('cell')" >Cell</button>
+      <button class="menu-item" onclick="toggleTab('chart')" >Chart</button>
+      <button class="menu-item" onclick="toggleTab('test')" >Test</button>
+      <button class="menu-item" onclick="toggleTab('converter')" >Converter</button>
+      <button class="menu-item" onclick="toggleTab('sort')">Sort</button>
+      <button class="menu-item" onclick="toggleTab('curd')">CRUD</button>
+      <button class="menu-item" onclick="toggleTab('book')">Book</button>
+      <button class="menu-item" onclick="toggleTab('count')">Count</button>
+    </div>
+    
+    <div class="content" id="cell" style="display: none;">
+      <!-- Test Content -->
+      <!-- <h1>Cell</h1>
+      <p>This is the Cell content.</p> -->
+    </div>
+
+    <div class="content" id="chart" style="display: none;">
+      <!-- Test Content -->
+      <h1>Chart</h1>
+      <p>This is the Chart content.</p>
+    </div>
+
+    <div class="content" id="test" style="display: none;">
+      <!-- Test Content -->
+      <h1>Test</h1>
+      <p>This is the Test content.</p>
+    </div>
+
+    <div class="content" id="converter" style="display: none;">
+      <!-- Test Content -->
+      <h1>Converter</h1>
+      <p>This is the Converter content.</p>
+    </div>
+  
+    <div class="content" id="sort" style="display: none;">
+      <!-- Sort Content -->
+      <h1>Sort</h1>
+      <p>This is the Sort content.</p>
+    </div>
+  
+    <div class="content" id="curd" style="display: none;">
+      <!-- CRUD Content -->
+      <h1>CRUD</h1>
+      <p>This is the CRUD content.</p>
+    </div>
+  
+    <div class="content" id="book" style="display: none;">
+      <!-- Book Content -->
+      <h1>Book</h1>
+      <p>This is the Book content.</p>
+    </div>
+    
+    <div class="content" id="count" style="display: none;">
+      <!-- Book Content -->
+      <h1>Count</h1>
+      <p>This is the Count content.</p>
+    </div>
+
+    <script>
+      function toggleTab(tabId) {
+      const tabContent = document.getElementById(tabId);
+      if (tabContent.style.display === "none") {
+        tabContent.style.display = "block";
+      } else {
+        tabContent.style.display = "none";
+      }
+    }
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
